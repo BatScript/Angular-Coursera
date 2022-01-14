@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="first-app" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script
+      crossorigin="anonymous"
+      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"
+    ></script>
+    <script src="app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Object prototyping</h1>
+    <div ng-controller="parent-controller as parent">
+      <h3>Parent.value : {{parent.value}}</h3>
+      <div ng-controller="child-controller as child">
+        <h3>child.value : {{child.value}}</h3>
+        <h3>parent in child.value : {{parent.value}}</h3>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app="my-app" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script
+      crossorigin="anonymous"
+      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"
+    ></script>
+    <script src="app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div ng-controller="shoppingListController1 as list1">
+      <h1>LIST 1</h1>
+      <div>
+        <input
+          ng-model="list1.itemName"
+          class="input"
+          placeholder="item name"
+          type="text"
+        />
+        <input
+          ng-model="list1.itemQty"
+          class="input"
+          placeholder="quantity with unit"
+          type="text"
+        />
+        <button class="btn btn-success" ng-click="list1.addItem();">ADD</button>
+      </div>
+      <div>
+        <ol>
+          <li ng-repeat="item in list1.items">
+            {{item.qty}} of {{item.name}}
+            <button ng-click="list1.deleteItem($index)">Delete</button>
+          </li>
+        </ol>
+        <!-- <p ng-if="list1.errmsg">Error : {{list1.errmsg}}</p> -->
+        <!-- <p ng-show="list1.errmsg">Error : {{list1.errmsg}}</p> -->
+        <!-- <p ng-hide="list1.errmsg">Error : {{list1.errmsg}}</p> -->
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- <div ng-controller="shoppingListController2 as list2">
+        <h1>LIST 2</h1>
+        <div>
+          <input
+            ng-model="list2.itemName"
+            class="input"
+            placeholder="item name"
+            type="text"
+          />
+          <input
+            ng-model="list2.itemQty"
+            class="input"
+            placeholder="quantity with unit"
+            type="text"
+          />
+          <button class="btn btn-success" ng-click="list2.addItem();">ADD</button>
+          <div>
+            <ol>
+              <li ng-repeat="item in list2.items">
+                {{item.qty}} of {{item.name}}
+                <button ng-click="list2.deleteItem($index)">Delete</button>
+              </li>
+            </ol>
+            <p>{{list2.errmsg}}</p>
+          </div>
+        </div>
+      </div> -->
+  </body>
+</html>
