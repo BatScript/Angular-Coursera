@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="my-app" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script
+      crossorigin="anonymous"
+      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"
+    ></script>
+    <script src="app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div ng-controller="mainController as main">
+      <h4>Enter the items you want to purchase</h4>
+      <p ng-repeat="item in main.itemList">
+        {{item.qty}} of {{item.name}}
+        <button ng-click="main.addToCart($index)" class="btn btn-success">
+          Add
+        </button>
+      </p>
+
+      <div>
+        <h4>Cart Items</h4>
+        <p ng-if="main.message()">Try adding items my friend</p>
+        <p ng-repeat="item in main.items">
+          {{item.qty}} of {{item.name}} &nbsp;
+          <button class="btn btn-danger" ng-click="main.deleteFromCart($index)">
+            Cross
+          </button>
+        </p>
+      </div>
+      <div>
+        <h4>Already bought</h4>
+        <p ng-repeat="item in main.deletedItems">
+          bought {{item.qty}} of {{item.name}}
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
