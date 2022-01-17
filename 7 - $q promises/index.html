@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="my-app" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -17,5 +17,14 @@
     />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <div ng-controller="firstController as first">
+      <h5>Enter the game to check</h5>
+      <input ng-model="first.gameName" type="text" />
+      <input ng-model="first.gameHours" type="text" />
+      <button ng-click="first.check()">Submit</button>
+      <p>{{first.message}}</p>
+      <p>{{first.message2}}</p>
+    </div>
+  </body>
 </html>
