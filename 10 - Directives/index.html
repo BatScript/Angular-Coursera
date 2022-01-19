@@ -18,15 +18,16 @@
     <title>Document</title>
   </head>
   <body>
-    <div ng-controller="first-controller as fc">
-      <div ng-repeat="item in fc.value">
-        <img
-          ng-src="{{item.image}}"
-          alt=""
-          class="img-thumbnail img-fluid"
-        />
-        <a ng-click="fc.aboutFilm(item.id)" href=""><p>{{item.title}}</p> </a>
-      </div>
+    <!-- Api wala -->
+    <div ng-controller="conOne as con">
+      <whole-list
+        ng-repeat="items in con.apiData"
+        ng-attr-id="{{items.char_id}}"
+      />
+    </div>
+    <!-- Hard coded -->
+    <div ng-controller="conTwo as c2">
+      <con-two-list ng-repeat="items in c2.list" />
     </div>
   </body>
 </html>
