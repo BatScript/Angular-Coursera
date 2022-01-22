@@ -17,7 +17,6 @@
   }
   function ListItems() {
     var ddo = {
-      restrict: "AE",
       template: "<b>{{items.name}}</b> : {{items.occupation}} ",
     };
     return ddo;
