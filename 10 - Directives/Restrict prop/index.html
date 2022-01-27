@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html ng-app="my-app" lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <script crossorigin="anonymous" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script
+      crossorigin="anonymous"
+      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"
+    ></script>
     <script src="app.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
     <title>Document</title>
-</head>
-<style>
+  </head>
+  <style>
     body {
-        display: flex;
+      display: flex;
     }
-</style>
+  </style>
 
-<body>
+  <body>
     <h1>Hola</h1>
     <div ng-controller="listOne as l1">
-        <input ng-model="l1.itemName" type="text">
-        <button ng-click="l1.onAddToList()">Add</button>
-        <list-item my-list="l1" />
+      <input ng-model="l1.itemName" type="text" />
+      <button ng-click="l1.onAddToList()">Add</button>
+      <list-item my-list="l1" />
     </div>
     <h1>Hola 2</h1>
     <div ng-controller="listTwo as l2">
-        <input ng-model="l2.itemName" type="text">
-        <button ng-click="l2.onAddToList()">Add</button>
-        <list-item my-list="l2" />
+      <input ng-model="l2.itemName" type="text" />
+      <button ng-click="l2.onAddToList()">Add</button>
+      <list-item my-list="l2" />
     </div>
-</body>
-
+  </body>
 </html>
