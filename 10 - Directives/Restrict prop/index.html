@@ -16,6 +16,7 @@
       crossorigin="anonymous"
     />
     <title>Document</title>
+<<<<<<< HEAD
   </head>
   <style>
     body {
@@ -29,12 +30,27 @@
       <input ng-model="l1.itemName" type="text" />
       <button ng-click="l1.onAddToList()">Add</button>
       <list-item my-list="l1" />
+=======
+</head>
+<style></style>
+
+<body>
+    <div ng-controller="listOne as l1">
+        <input ng-model="l1.itemName" type="text" />
+        <button ng-click="l1.onAddToList()">Add</button>
+        <list-item items="l1.items" title="Shopping list 1" />
+>>>>>>> 50dc8aec099fe53f0db58e02420b1ffda837d819
     </div>
-    <h1>Hola 2</h1>
     <div ng-controller="listTwo as l2">
+<<<<<<< HEAD
       <input ng-model="l2.itemName" type="text" />
       <button ng-click="l2.onAddToList()">Add</button>
       <list-item my-list="l2" />
+=======
+        <input ng-model="l2.itemName" type="text" />
+        <button ng-click="l2.onAddToList()">Add</button>
+        <list-item my-list="l2" title="Shopping list 2" />
+>>>>>>> 50dc8aec099fe53f0db58e02420b1ffda837d819
     </div>
   </body>
 </html>
