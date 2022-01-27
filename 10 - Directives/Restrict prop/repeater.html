@@ -1,4 +1,6 @@
 <div ng-repeat = "items in list.items track by $index">
-    <li>{{items}}  <button ng-click="list.deleteItem($index)">Delete</button></li>
-    
+    <h4>{{title}}</h4>
+    <p>{{items}}</p>
+    <!-- <li>{{items}} <button ng-click="list.deleteItem($index)">Delete</button></li> -->
 </div>
+<p class="error" ng-if="list.warningFunction()">WARNING! WARNING! COOKIES DETECTED!</p>

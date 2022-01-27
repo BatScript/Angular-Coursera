@@ -4,19 +4,36 @@
         .controller("listOne", listOne)
         .controller("listTwo", listTwo)
         .service("listService", listService)
+        .controller("warningController", warningController)
         .factory("listFactory", listFactory)
         .directive("listItem", ListItem);
 
     function ListItem() {
         var ddo = {
-            restrict : "AE",
             templateUrl: 'repeater.html',
             scope : {
-                list : "=myList",
-                title : '@title'
-            }
+                items : "<",
+                title : '@'
+            },
+            controller : 'warningController as list',
+            // controllerAs : 'list',
+            bindToController : true
         }
         return ddo;
+    }
+
+    function warningController() { 
+        var list = this;
+
+        list.warningFunction = function() { 
+            for(var i = 0 ; list.items.length; i++) {
+                var name = list.items[i];
+                if(name.toLowerCase().indexOf("cookie") !== -1) {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 
     listOne.$inject = ["listFactory"];
@@ -47,7 +64,6 @@
 
         l2.onAddToList = function () {
             listFactory.addItem(l2.itemName);
-            console.log(l2.list2);
             l2.itemName = ""
         }
 
