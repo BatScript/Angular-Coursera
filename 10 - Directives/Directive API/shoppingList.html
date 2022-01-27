@@ -8,6 +8,6 @@
     <button ng-click="list.onRemove({index: $index});">Remove Item</button>
   </li>
 </div>
-<div class="error" ng-if="list.cookiesInList()">
-  WARNING! WARNING! COOKIES DETECTED!
+<div class="text-danger" ng-if="list.valoInList()">
+  Stop playing this game, you suck!
 </div>

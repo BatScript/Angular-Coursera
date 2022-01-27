@@ -25,10 +25,10 @@
   function ShoppingListDirectiveController() {
     var list = this;
 
-    list.cookiesInList = function () {
+    list.valoInList = function () {
       for (var i = 0; i < list.items.length; i++) {
         var name = list.items[i].name;
-        if (name.toLowerCase().indexOf("cookie") !== -1) {
+        if (name.toLowerCase().indexOf("valorant") !== -1) {
           return true;
         }
       }
