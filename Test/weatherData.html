@@ -1,0 +1,7 @@
+<div ng-if = "my.dataIsLoaded">
+    <p>Temperature : {{my.finalData.main.temp}}° C</p>
+    <p>Feels like : {{my.finalData.main.feels_like}}° C</p>
+    <p>Min Temperature : {{my.finalData.main.temp_min}}° C</p>
+    <p>Max Temperature : {{my.finalData.main.temp_max}}° C</p>
+</div>
+<p ng-if = "my.err">{{my.err}}</p>
